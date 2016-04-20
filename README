@@ -1,0 +1,11 @@
+1. To build:
+
+make
+
+2. To run:
+
+./sigcert opt -src= "path to source file" -cmp= "path to compiled file" [-debug= true]
+
+opt can be -clk, -dep, -val
+
+example: ./sigcert -clk -src= tests/model.sig -cmp= tests/model.sig

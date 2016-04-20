@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# include and lib consist the Yices header files and static library files
+
+rm -f yicesw
+gcc -o yicesw -I include -L lib yicesw.c -lyices -lgmp -lstdc++
