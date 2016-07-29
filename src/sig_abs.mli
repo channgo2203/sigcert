@@ -5,7 +5,7 @@
  * Maintainer  : Chan Ngo <chan.ngo@inria.fr>
 
  * This module construct an abstract syntax 
- * representation of a Signal origram
+ * representation of a Signal program
  *)
 
 (** file type *)

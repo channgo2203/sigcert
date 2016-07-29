@@ -9,7 +9,9 @@ open Validate
 
 (* verification mode *)
 let mode = ref 0
- 
+(* print clock models *)
+let print_clk = ref false
+
 (* input information *)
 let src_file = ref ""
 let cmp_file = ref ""
@@ -72,8 +74,12 @@ let _ =
                     	Arg.String (fun s -> cmp_file := s),
                     	": The compiled file name"
                    	);
-										("-debug=",
-											Arg.Bool (fun b -> Errors.set_debug b),
+							("-print-clk",
+								Arg.Unit (fun () -> print_clk := true),
+								": Print clock models"
+							);
+										("-debug",
+											Arg.Unit (fun () -> Errors.set_debug true),
 											": The debug mode"
 										);
 		 								("-version",
